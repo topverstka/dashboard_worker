@@ -59,31 +59,31 @@ function bodyLock(con) {
 	}
 }
 
-// $('[name="date-start"]').daterangepicker({
-//     autoApply: true,
-//     singleDatePicker: true,
-//     minYear: 2020, // Раньше этого года пользователь не может выбрать
-//     locale: {
-//         format: 'DD.MM.YYYY'
-//     }
-// });
+$('[name="date-start"]').daterangepicker({
+    autoApply: true,
+    singleDatePicker: true,
+    minYear: 2020, // Раньше этого года пользователь не может выбрать
+    locale: {
+        format: 'DD.MM.YYYY'
+    }
+});
 
-// $('[name="date-end"]').daterangepicker({
-//     autoApply: true,
-//     singleDatePicker: true,
-//     minYear: 2020, // Раньше этого года пользователь не может выбрать
-//     locale: {
-//         format: 'DD.MM.YYYY'
-//     }
-// });
+$('[name="date-end"]').daterangepicker({
+    autoApply: true,
+    singleDatePicker: true,
+    minYear: 2020, // Раньше этого года пользователь не может выбрать
+    locale: {
+        format: 'DD.MM.YYYY'
+    }
+});
 
-// $('[data-select-date]').on('show.daterangepicker', e => {
-//     e.currentTarget.parentElement.classList.add('_show-daterangepicker')
-// })
+$('[data-select-date]').on('show.daterangepicker', e => {
+    e.currentTarget.parentElement.classList.add('_show-daterangepicker')
+})
 
-// $('[data-select-date]').on('hide.daterangepicker', e => {
-//     e.currentTarget.parentElement.classList.remove('_show-daterangepicker')
-// })
+$('[data-select-date]').on('hide.daterangepicker', e => {
+    e.currentTarget.parentElement.classList.remove('_show-daterangepicker')
+})
 
 // Функции для модальных окон
 modal()
