@@ -21,25 +21,25 @@
 // }
 
 // Стиль скроллбара
-body::-webkit-scrollbar {
-    width: 14px;
-}
+// body::-webkit-scrollbar {
+//     width: 14px;
+// }
 
-body::-webkit-scrollbar-track {
-    background: #fff;
-}
+// body::-webkit-scrollbar-track {
+//     background: #fff;
+// }
 
-body::-webkit-scrollbar-thumb {
-    background-color: #cecece;
-}
+// body::-webkit-scrollbar-thumb {
+//     background-color: #cecece;
+// }
 
 body {
     font-family: $ffMain;
     color: $main;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 500;
     font-style: normal;
-    line-height: 1.5;
+    line-height: 1.2;
     background: $bg-page;
 
     &._lock {
@@ -61,17 +61,27 @@ body {
 // Анимация
 @import './_animation';
 
-// Компоненты
-@import './components/_buttons';
-@import './components/_forms';
-@import './components/_modal';
- 
 // Текстовые компоненты
 @import './components/text/_text';
 @import './components/text/_titles';
 
+// Компоненты
+@import './components/_buttons';
+@import './components/_forms';
+@import './components/_modal';
+@import './components/_s-select-date';
+@import './components/_select';
+@import './components/_s-block'; 
+@import './components/_s-header'; 
+@import './components/_s-table'; 
+@import './components/_s-acc'; 
+@import './components/_swip'; 
+
 // Секции
 @import './sections/_header';
+@import './sections/_content';
+@import './sections/_s-kpi';
+@import './sections/_s-chart';
 @import './sections/_footer';
 
 // Страницы

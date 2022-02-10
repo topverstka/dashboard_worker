@@ -24,6 +24,24 @@ function removeAll(items,itemClass) {
     }
 }
 
+// Получаем все соседние элементы
+function getSiblings(elem) {
+    var siblings = [];
+    var sibling = elem;
+    while (sibling.previousSibling) {
+        sibling = sibling.previousSibling;
+        sibling.nodeType == 1 && siblings.push(sibling);
+    }
+
+    sibling = elem;
+    while (sibling.nextSibling) {
+        sibling = sibling.nextSibling;
+        sibling.nodeType == 1 && siblings.push(sibling);
+    }
+
+    return siblings;
+}
+
 function bodyLock(con) {
     if (con === true) {
         body.classList.add('_lock');
@@ -41,139 +59,31 @@ function bodyLock(con) {
 	}
 }
 
-// Валидация формы
-function validationForm() {
-    const name = find('#user_name')
-    const phone = find('#user_phone')
-    const email = find('#user_email')
+// $('[name="date-start"]').daterangepicker({
+//     autoApply: true,
+//     singleDatePicker: true,
+//     minYear: 2020, // Раньше этого года пользователь не может выбрать
+//     locale: {
+//         format: 'DD.MM.YYYY'
+//     }
+// });
 
-    let con = true
+// $('[name="date-end"]').daterangepicker({
+//     autoApply: true,
+//     singleDatePicker: true,
+//     minYear: 2020, // Раньше этого года пользователь не может выбрать
+//     locale: {
+//         format: 'DD.MM.YYYY'
+//     }
+// });
 
-    for (let i = 0; i < [name, phone, email].length; i++) {
-        const elem = [name, phone, email][i];
-        const elemValue = elem.value.trim()
+// $('[data-select-date]').on('show.daterangepicker', e => {
+//     e.currentTarget.parentElement.classList.add('_show-daterangepicker')
+// })
 
-        if (elemValue === '') {
-            elem.classList.add('_error')
-            con = false
-        } else {
-            elem.classList.remove('_error')
-            con = true
-        }
-    }
-
-    return con
-}
-
-// Отправка формы
-sumbitForm()
-function sumbitForm() {
-    const form = find('.modal__form')
-
-    form.addEventListener('submit', async e => {
-        const modal = find('.modal._show')
-        const btnSend = form.querySelector('[type=submit]')
-        btnSend.classList.add('send-preloader')
-
-        e.preventDefault()
-        
-        let con = validationForm()
-
-        if (con === true) {
-            const formData = new FormData()
-            const action = form.getAttribute('action')
-    
-            let response = await fetch(action, {
-                method: 'POST',
-                body: formData
-            })
-            
-            // settimeout здесь для того, чтобы показать работу отправки формы. В дальнейшем это нужно убрать
-            setTimeout(() => {
-                if (response.ok) {
-                    console.log('Successful')
-                    form.reset()
-    
-                    modal.classList.remove('_show')
-                    find('#send-done').classList.add('_show')
-                    btnSend.classList.remove('send-preloader')
-                }
-                else {
-                    console.log('Error')
-                    form.reset()
-    
-                    modal.classList.remove('_show')
-                    find('#send-error').classList.add('_show')
-                    btnSend.classList.remove('send-preloader')
-                }
-            }, 2000)
-
-        }
-    })
-}
-
-// Мобильное меню
-// menu()
-function menu() {
-	const burger = find('.burger')
-	const menu = find('.menu');
-	
-	// Высота меню
-	window.addEventListener('resize', () => {
-		const headerHeight = find('.header').clientHeight
-
-		if (window.innerWidth <= 768) {
-			menu.style.paddingTop = headerHeight + 'px'
-		}
-		else {
-			menu.style.paddingTop = 0
-		}
-	})
-
-	burger.addEventListener('click', (e) => {
-		burger.classList.toggle('burger_close')
-		menu.classList.toggle('_show')
-		bodyLock()
-	})
-}
-
-const swiper = new Swiper('.swiper-container', {
-  
-  slidesPerView: 1, // Кол-во показываемых слайдов
-  spaceBetween: 0, // Расстояние между слайдами
-  loop: true, // Бесконечный слайдер
-  freeMode: true, // Слайдеры не зафиксированны
-  centeredSlides: false, // Размещать слайдеры по центру
-
-  autoplay: { // автопрокрутка
-      delay: 5000, // задержка
-  },
-
-  breakpoints: {
-    1200: {
-
-    },
-    700: {
-
-    },
-    400: {
-
-    }
-  },
-
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  navigation: {
-    nextEl: '.swiper__arrow-next',
-    prevEl: '.swiper__arrow-prev',
-  },
-
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+// $('[data-select-date]').on('hide.daterangepicker', e => {
+//     e.currentTarget.parentElement.classList.remove('_show-daterangepicker')
+// })
 
 // Функции для модальных окон
 modal()
@@ -277,4 +187,170 @@ function modal() {
         bodyLock(false)
         resetHash()
     }
+}
+
+// Плейсхолдер текстовых полей
+labelTextfield()
+function labelTextfield() {
+    const textfieldElems = document.querySelectorAll('.textfield')
+
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const textfield = textfieldElems[i];
+        const input = textfield.querySelector('input, textarea')
+        const label = textfield.querySelector('label')
+
+        input.addEventListener('focus', e => {
+            label.classList.add('_change-label')
+        })
+
+        input.addEventListener('blur', e => {
+            if (input.value === '') {
+                label.classList.remove('_change-label')
+            }
+        })
+    }
+}
+
+// В инпуте могут быть только цифры если у textfield есть класс only-digit
+onlyDigit()
+function onlyDigit() {
+    const inputElems = document.querySelectorAll('[only-digit]')
+
+    for (let i = 0; i < inputElems.length; i++) {
+        const input = inputElems[i]
+
+        input.addEventListener('keypress', function(e) {
+            const inputValue = e.charCode;
+        
+            if(!(inputValue >= 48 && inputValue <= 57) && (inputValue != 43 && inputValue != 0 && inputValue != 40 && inputValue != 41 && inputValue != 45 && inputValue != 44)) {
+                e.preventDefault();
+            }
+        }); 
+    }
+}
+
+// Списки выбора
+select()
+function select() {
+    // Проверяем есть ли выбранные элементы при загрузке страницы. Если есть, то селект заполняется
+    const selectedItemElems = document.querySelectorAll('.select-dropdown__item._selected')
+
+    for (let i = 0; i < selectedItemElems.length; i++) {
+        const selectedItem = selectedItemElems[i];
+        const select = selectedItem.closest('.select')
+        const sTitle = select.querySelector('.select-input__title')
+
+        sTitle.innerText = selectedItem.innerHTML
+        select.classList.add('_valid')
+    }
+
+    // Если пользователь кликнул по селекту, то он открывается/закрывается. Также он закроется если кликнуть вне его области
+    window.addEventListener('click', e => {
+        const target = e.target
+
+        // Если пользователь кликнул вне зоны селекта
+        if (!target.classList.contains('select') && !target.closest('.select._open')) {
+            if (find('.select._open')) {
+                find('.select._open').classList.remove('_open')
+            }
+
+            // для селекта с выбором городов
+            if (find('.select-city._open')) {
+                find('.select-city._open').classList.remove('_open')
+            }
+        }
+
+        // Если пользователь кликнул по шапке селекта
+        if (target.classList.contains('select-input')) {
+            target.parentElement.classList.toggle('_open')
+        }
+
+        // Если пользователь выбрал пункт из списка селекта
+        if (target.classList.contains('select-dropdown__item')) {
+            const select = target.closest('.select')
+            const sTitle = select.querySelector('.select-input__title')
+            const neighbourTargets = target.parentElement.querySelectorAll('.select-dropdown__item')
+
+            sTitle.innerText = target.innerText
+
+            removeAll(neighbourTargets, '_selected')
+            target.classList.add('_selected')
+
+            select.classList.remove('_open')
+            select.classList.add('_valid')
+
+            if (select.closest('[data-form-valid=submit-disabled]')) {
+                const form = select.closest('[data-form-valid=submit-disabled]')
+                const btnSubmit = form.querySelector('[type=submit]')
+
+                if (checkValidTextfields(form)) {
+                    btnSubmit.disabled = false
+                }
+                else {
+                    btnSubmit.disabled = true
+                }
+            }
+        }
+    })
+}
+
+// Аккордеоны
+accordions()
+function accordions() {
+  const hiddenSiblingAcc = true // Скрывать соседние аккордеоны. false если не нужно.
+  const accOpenElems = document.querySelectorAll('[data-acc-open]')
+  
+  for (let i = 0; i < accOpenElems.length; i++) {
+    const accOpen = accOpenElems[i]
+    
+    accOpen.addEventListener('click', e => {
+      const container = (!accOpen.closest('.acc-body')) ? accOpen.parentElement.parentElement : accOpen.closest('.acc-body')
+      const parent = accOpen.closest('.acc')
+      const accBody = accOpen.closest('.acc-header').nextElementSibling
+
+      parent.classList.toggle('_show') 
+      accOpen.classList.toggle('_show') 
+      
+      if (accBody.style.maxHeight) { 
+        accBody.style.maxHeight = null
+        parent.classList.remove('_show') 
+        accOpen.classList.remove('_show') 
+      }
+      else {
+        const adjacentElems = getSiblings(parent)
+        
+        if (hiddenSiblingAcc) {
+          for (let i = 0; i < adjacentElems.length; i++) {
+            const elem = adjacentElems[i]
+            const elemHeader = elem.querySelector('[data-acc-open]')
+            const elemBody = elem.querySelector('.acc-body')
+
+            elem.classList.remove('_show') 
+            elemHeader.classList.remove('_show')  
+            elemBody.style.maxHeight = null
+          }
+        }
+        
+        accBody.style.maxHeight = accBody.scrollHeight + 'px'
+        container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
+      }
+    })
+  }
+}
+
+// Функция для рассчета угла стрелки графика
+angleChartArrow(70, 100)
+function angleChartArrow(result, max) {
+    const arrow = document.getElementById('chart-arrow')
+
+    arrow.style = `display:block; transform:rotate(${result/(max/100)*1.8}deg)`
+}
+
+// Функция для рассчета отклонения стрелки эффективности и компетентности сотрудника
+indentSwipeArrow('swip_effective_arrow', 62, 100)
+indentSwipeArrow('swip_comp_arrow', 62, 100)
+function indentSwipeArrow(selector, result, max) {
+    const arrow = document.getElementById(selector)
+
+    arrow.style = `display:block; left:${result/(max/100)}%`
 }

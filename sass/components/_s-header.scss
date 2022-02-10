@@ -1,0 +1,46 @@
+// Title file: Компонент шапки секций
+.s-header {
+    padding: 15px 40px;
+}
+
+.s-header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.s-header__title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.s-header__title-icon {
+    min-width: 34px;
+    width: 34px;
+    height: 34px;
+    margin-right: 20px;
+}
+
+.s-header__title-text {
+
+}
+
+.s-header__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & .s-select-date {
+
+        &:not(:last-child) {
+            margin-right: 48px;
+        }
+    }
+
+    & .s-select {
+        max-width: 470px;
+        width: 100%;
+    }
+}

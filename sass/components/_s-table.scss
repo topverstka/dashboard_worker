@@ -1,0 +1,139 @@
+.s-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.s-table__header {
+    background: #F2FBFF;
+
+    & .s-table__cell {
+
+        &:not(:last-child) {
+            border-right: 1px solid #BEEDFD;
+        }
+    }
+
+    & .table-column-subtitle {
+        color: #9AA5A8;
+    }
+}
+
+.s-table__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.s-table__header-row {
+}
+
+.s-table__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+
+    &:first-child {
+        padding-left: 40px;
+
+        & .table-column-title {
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    &:nth-child(1) {
+        width: 33%;
+    }
+
+    &:nth-child(2) {
+        width: 22%;
+    }
+
+    &:nth-child(3) {
+        width: 22%;
+    }
+
+    &:nth-child(4) {
+        width: 8%;
+    }
+
+    &:nth-child(5) {
+        width: 14%;
+    }
+}
+
+.s-table__title {
+    margin-bottom: 15px;
+}
+
+.s-table__subcell {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > .table-column-subtitle {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    & .table-row-title {
+        position: relative;
+        min-width: 55px;
+        width: 100%;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &::after {
+            content: attr(data-amount);
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, 100%);
+            font-size: 8px;
+            color: $second;
+        }
+    }
+}
+
+// Тело таблицы
+.s-table__body {
+
+    & .s-table__row {
+
+        &:nth-child(even) {
+            background: #F9FAFB;
+        }
+    }
+
+    & .s-table__cell {
+        justify-content: center;
+
+        &:first-child {
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid #E9ECEF;
+        }
+    }
+}
+
+.s-table__price {
+    font-size: 11px;
+    font-weight: 500;
+    color: $second;
+    margin-top: 5px;
+}
+
+.s-table__row-value {
+    // font-size: 13   ;
+}

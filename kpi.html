@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="./img/favicon.ico"> <!-- Генератор фавикон - https://realfavicongenerator.net/ -->
+	<title>ТопВерстка</title>
+	<meta name="description" content="Описание сайта">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+
+		</header>
+		<div class="content">
+			<div class="container">
+				<div class="s-kpi">
+					<div class="s-kpi__wrap">
+						<div class="s-kpi__header s-header">
+							<div class="s-header__wrap">
+								<div class="s-header__title">
+									<div class="s-header__title-icon"><svg><use href='./img/sprite.svg#s_post'></use></svg></div>
+									<h2 class="s-title s-header__title-text">Показатели KPI</h2>
+								</div>
+							</div>
+						</div>
+						<div class="s-kpi__body">
+                            <div class="acc s-acc">
+                                <div class="acc-header s-acc__header" data-acc-open>
+                                    <h2 class="s-title s-acc__title">Тут будет название должности</h2>
+                                    <div class="s-acc__chevron">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90987 12.5984C7.71377 12.5779 7.52871 12.4976 7.37985 12.3683L0.659848 5.1538C0.547795 5.07808 0.453008 4.97954 0.381684 4.86464C0.31036 4.74974 0.264119 4.62107 0.245981 4.48706C0.227843 4.35304 0.238215 4.21671 0.27643 4.08698C0.314645 3.95726 0.379844 3.83707 0.467739 3.73429C0.555633 3.63151 0.664246 3.54846 0.786469 3.49058C0.908693 3.4327 1.04175 3.40129 1.17696 3.39841C1.31216 3.39553 1.44646 3.42125 1.57104 3.47388C1.69562 3.52651 1.80766 3.60487 1.89985 3.70381L7.99985 10.3883L14.0999 3.70381C14.192 3.60487 14.3041 3.52651 14.4287 3.47388C14.5533 3.42125 14.6875 3.39553 14.8227 3.39841C14.9579 3.40129 15.091 3.4327 15.2133 3.49058C15.3355 3.54846 15.4441 3.63151 15.532 3.73429C15.6199 3.83707 15.6851 3.95726 15.7233 4.08698C15.7615 4.21671 15.7719 4.35304 15.7537 4.48706C15.7356 4.62107 15.6893 4.74974 15.618 4.86464C15.5467 4.97954 15.4519 5.07808 15.3399 5.1538L8.61985 12.3683C8.52285 12.4521 8.41007 12.5157 8.28813 12.5552C8.16619 12.5947 8.03758 12.6094 7.90987 12.5984Z" fill="#333333"/>
+                                        </svg>                                            
+                                    </div>
+                                </div>
+                                <div class="acc-body s-acc__body">
+                                    <div class="s-acc__list">
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc s-acc">
+                                <div class="acc-header s-acc__header" data-acc-open>
+                                    <h2 class="s-title s-acc__title">Тут будет название должности</h2>
+                                    <div class="s-acc__chevron">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90987 12.5984C7.71377 12.5779 7.52871 12.4976 7.37985 12.3683L0.659848 5.1538C0.547795 5.07808 0.453008 4.97954 0.381684 4.86464C0.31036 4.74974 0.264119 4.62107 0.245981 4.48706C0.227843 4.35304 0.238215 4.21671 0.27643 4.08698C0.314645 3.95726 0.379844 3.83707 0.467739 3.73429C0.555633 3.63151 0.664246 3.54846 0.786469 3.49058C0.908693 3.4327 1.04175 3.40129 1.17696 3.39841C1.31216 3.39553 1.44646 3.42125 1.57104 3.47388C1.69562 3.52651 1.80766 3.60487 1.89985 3.70381L7.99985 10.3883L14.0999 3.70381C14.192 3.60487 14.3041 3.52651 14.4287 3.47388C14.5533 3.42125 14.6875 3.39553 14.8227 3.39841C14.9579 3.40129 15.091 3.4327 15.2133 3.49058C15.3355 3.54846 15.4441 3.63151 15.532 3.73429C15.6199 3.83707 15.6851 3.95726 15.7233 4.08698C15.7615 4.21671 15.7719 4.35304 15.7537 4.48706C15.7356 4.62107 15.6893 4.74974 15.618 4.86464C15.5467 4.97954 15.4519 5.07808 15.3399 5.1538L8.61985 12.3683C8.52285 12.4521 8.41007 12.5157 8.28813 12.5552C8.16619 12.5947 8.03758 12.6094 7.90987 12.5984Z" fill="#333333"/>
+                                        </svg>                                            
+                                    </div>
+                                </div>
+                                <div class="acc-body s-acc__body">
+                                    <div class="s-acc__list">
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc s-acc">
+                                <div class="acc-header s-acc__header" data-acc-open>
+                                    <h2 class="s-title s-acc__title">Тут будет название должности</h2>
+                                    <div class="s-acc__chevron">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90987 12.5984C7.71377 12.5779 7.52871 12.4976 7.37985 12.3683L0.659848 5.1538C0.547795 5.07808 0.453008 4.97954 0.381684 4.86464C0.31036 4.74974 0.264119 4.62107 0.245981 4.48706C0.227843 4.35304 0.238215 4.21671 0.27643 4.08698C0.314645 3.95726 0.379844 3.83707 0.467739 3.73429C0.555633 3.63151 0.664246 3.54846 0.786469 3.49058C0.908693 3.4327 1.04175 3.40129 1.17696 3.39841C1.31216 3.39553 1.44646 3.42125 1.57104 3.47388C1.69562 3.52651 1.80766 3.60487 1.89985 3.70381L7.99985 10.3883L14.0999 3.70381C14.192 3.60487 14.3041 3.52651 14.4287 3.47388C14.5533 3.42125 14.6875 3.39553 14.8227 3.39841C14.9579 3.40129 15.091 3.4327 15.2133 3.49058C15.3355 3.54846 15.4441 3.63151 15.532 3.73429C15.6199 3.83707 15.6851 3.95726 15.7233 4.08698C15.7615 4.21671 15.7719 4.35304 15.7537 4.48706C15.7356 4.62107 15.6893 4.74974 15.618 4.86464C15.5467 4.97954 15.4519 5.07808 15.3399 5.1538L8.61985 12.3683C8.52285 12.4521 8.41007 12.5157 8.28813 12.5552C8.16619 12.5947 8.03758 12.6094 7.90987 12.5984Z" fill="#333333"/>
+                                        </svg>                                            
+                                    </div>
+                                </div>
+                                <div class="acc-body s-acc__body">
+                                    <div class="s-acc__list">
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc s-acc">
+                                <div class="acc-header s-acc__header" data-acc-open>
+                                    <h2 class="s-title s-acc__title">Тут будет название должности</h2>
+                                    <div class="s-acc__chevron">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90987 12.5984C7.71377 12.5779 7.52871 12.4976 7.37985 12.3683L0.659848 5.1538C0.547795 5.07808 0.453008 4.97954 0.381684 4.86464C0.31036 4.74974 0.264119 4.62107 0.245981 4.48706C0.227843 4.35304 0.238215 4.21671 0.27643 4.08698C0.314645 3.95726 0.379844 3.83707 0.467739 3.73429C0.555633 3.63151 0.664246 3.54846 0.786469 3.49058C0.908693 3.4327 1.04175 3.40129 1.17696 3.39841C1.31216 3.39553 1.44646 3.42125 1.57104 3.47388C1.69562 3.52651 1.80766 3.60487 1.89985 3.70381L7.99985 10.3883L14.0999 3.70381C14.192 3.60487 14.3041 3.52651 14.4287 3.47388C14.5533 3.42125 14.6875 3.39553 14.8227 3.39841C14.9579 3.40129 15.091 3.4327 15.2133 3.49058C15.3355 3.54846 15.4441 3.63151 15.532 3.73429C15.6199 3.83707 15.6851 3.95726 15.7233 4.08698C15.7615 4.21671 15.7719 4.35304 15.7537 4.48706C15.7356 4.62107 15.6893 4.74974 15.618 4.86464C15.5467 4.97954 15.4519 5.07808 15.3399 5.1538L8.61985 12.3683C8.52285 12.4521 8.41007 12.5157 8.28813 12.5552C8.16619 12.5947 8.03758 12.6094 7.90987 12.5984Z" fill="#333333"/>
+                                        </svg>                                            
+                                    </div>
+                                </div>
+                                <div class="acc-body s-acc__body">
+                                    <div class="s-acc__list">
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc s-acc">
+                                <div class="acc-header s-acc__header" data-acc-open>
+                                    <h2 class="s-title s-acc__title">Тут будет название должности</h2>
+                                    <div class="s-acc__chevron">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90987 12.5984C7.71377 12.5779 7.52871 12.4976 7.37985 12.3683L0.659848 5.1538C0.547795 5.07808 0.453008 4.97954 0.381684 4.86464C0.31036 4.74974 0.264119 4.62107 0.245981 4.48706C0.227843 4.35304 0.238215 4.21671 0.27643 4.08698C0.314645 3.95726 0.379844 3.83707 0.467739 3.73429C0.555633 3.63151 0.664246 3.54846 0.786469 3.49058C0.908693 3.4327 1.04175 3.40129 1.17696 3.39841C1.31216 3.39553 1.44646 3.42125 1.57104 3.47388C1.69562 3.52651 1.80766 3.60487 1.89985 3.70381L7.99985 10.3883L14.0999 3.70381C14.192 3.60487 14.3041 3.52651 14.4287 3.47388C14.5533 3.42125 14.6875 3.39553 14.8227 3.39841C14.9579 3.40129 15.091 3.4327 15.2133 3.49058C15.3355 3.54846 15.4441 3.63151 15.532 3.73429C15.6199 3.83707 15.6851 3.95726 15.7233 4.08698C15.7615 4.21671 15.7719 4.35304 15.7537 4.48706C15.7356 4.62107 15.6893 4.74974 15.618 4.86464C15.5467 4.97954 15.4519 5.07808 15.3399 5.1538L8.61985 12.3683C8.52285 12.4521 8.41007 12.5157 8.28813 12.5552C8.16619 12.5947 8.03758 12.6094 7.90987 12.5984Z" fill="#333333"/>
+                                        </svg>                                            
+                                    </div>
+                                </div>
+                                <div class="acc-body s-acc__body">
+                                    <div class="s-acc__list">
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc s-acc">
+                                <div class="acc-header s-acc__header" data-acc-open>
+                                    <h2 class="s-title s-acc__title">Тут будет название должности</h2>
+                                    <div class="s-acc__chevron">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90987 12.5984C7.71377 12.5779 7.52871 12.4976 7.37985 12.3683L0.659848 5.1538C0.547795 5.07808 0.453008 4.97954 0.381684 4.86464C0.31036 4.74974 0.264119 4.62107 0.245981 4.48706C0.227843 4.35304 0.238215 4.21671 0.27643 4.08698C0.314645 3.95726 0.379844 3.83707 0.467739 3.73429C0.555633 3.63151 0.664246 3.54846 0.786469 3.49058C0.908693 3.4327 1.04175 3.40129 1.17696 3.39841C1.31216 3.39553 1.44646 3.42125 1.57104 3.47388C1.69562 3.52651 1.80766 3.60487 1.89985 3.70381L7.99985 10.3883L14.0999 3.70381C14.192 3.60487 14.3041 3.52651 14.4287 3.47388C14.5533 3.42125 14.6875 3.39553 14.8227 3.39841C14.9579 3.40129 15.091 3.4327 15.2133 3.49058C15.3355 3.54846 15.4441 3.63151 15.532 3.73429C15.6199 3.83707 15.6851 3.95726 15.7233 4.08698C15.7615 4.21671 15.7719 4.35304 15.7537 4.48706C15.7356 4.62107 15.6893 4.74974 15.618 4.86464C15.5467 4.97954 15.4519 5.07808 15.3399 5.1538L8.61985 12.3683C8.52285 12.4521 8.41007 12.5157 8.28813 12.5552C8.16619 12.5947 8.03758 12.6094 7.90987 12.5984Z" fill="#333333"/>
+                                        </svg>                                            
+                                    </div>
+                                </div>
+                                <div class="acc-body s-acc__body">
+                                    <div class="s-acc__list">
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc s-acc">
+                                <div class="acc-header s-acc__header" data-acc-open>
+                                    <h2 class="s-title s-acc__title">Тут будет название должности</h2>
+                                    <div class="s-acc__chevron">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90987 12.5984C7.71377 12.5779 7.52871 12.4976 7.37985 12.3683L0.659848 5.1538C0.547795 5.07808 0.453008 4.97954 0.381684 4.86464C0.31036 4.74974 0.264119 4.62107 0.245981 4.48706C0.227843 4.35304 0.238215 4.21671 0.27643 4.08698C0.314645 3.95726 0.379844 3.83707 0.467739 3.73429C0.555633 3.63151 0.664246 3.54846 0.786469 3.49058C0.908693 3.4327 1.04175 3.40129 1.17696 3.39841C1.31216 3.39553 1.44646 3.42125 1.57104 3.47388C1.69562 3.52651 1.80766 3.60487 1.89985 3.70381L7.99985 10.3883L14.0999 3.70381C14.192 3.60487 14.3041 3.52651 14.4287 3.47388C14.5533 3.42125 14.6875 3.39553 14.8227 3.39841C14.9579 3.40129 15.091 3.4327 15.2133 3.49058C15.3355 3.54846 15.4441 3.63151 15.532 3.73429C15.6199 3.83707 15.6851 3.95726 15.7233 4.08698C15.7615 4.21671 15.7719 4.35304 15.7537 4.48706C15.7356 4.62107 15.6893 4.74974 15.618 4.86464C15.5467 4.97954 15.4519 5.07808 15.3399 5.1538L8.61985 12.3683C8.52285 12.4521 8.41007 12.5157 8.28813 12.5552C8.16619 12.5947 8.03758 12.6094 7.90987 12.5984Z" fill="#333333"/>
+                                        </svg>                                            
+                                    </div>
+                                </div>
+                                <div class="acc-body s-acc__body">
+                                    <div class="s-acc__list">
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc s-acc">
+                                <div class="acc-header s-acc__header" data-acc-open>
+                                    <h2 class="s-title s-acc__title">Тут будет название должности</h2>
+                                    <div class="s-acc__chevron">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90987 12.5984C7.71377 12.5779 7.52871 12.4976 7.37985 12.3683L0.659848 5.1538C0.547795 5.07808 0.453008 4.97954 0.381684 4.86464C0.31036 4.74974 0.264119 4.62107 0.245981 4.48706C0.227843 4.35304 0.238215 4.21671 0.27643 4.08698C0.314645 3.95726 0.379844 3.83707 0.467739 3.73429C0.555633 3.63151 0.664246 3.54846 0.786469 3.49058C0.908693 3.4327 1.04175 3.40129 1.17696 3.39841C1.31216 3.39553 1.44646 3.42125 1.57104 3.47388C1.69562 3.52651 1.80766 3.60487 1.89985 3.70381L7.99985 10.3883L14.0999 3.70381C14.192 3.60487 14.3041 3.52651 14.4287 3.47388C14.5533 3.42125 14.6875 3.39553 14.8227 3.39841C14.9579 3.40129 15.091 3.4327 15.2133 3.49058C15.3355 3.54846 15.4441 3.63151 15.532 3.73429C15.6199 3.83707 15.6851 3.95726 15.7233 4.08698C15.7615 4.21671 15.7719 4.35304 15.7537 4.48706C15.7356 4.62107 15.6893 4.74974 15.618 4.86464C15.5467 4.97954 15.4519 5.07808 15.3399 5.1538L8.61985 12.3683C8.52285 12.4521 8.41007 12.5157 8.28813 12.5552C8.16619 12.5947 8.03758 12.6094 7.90987 12.5984Z" fill="#333333"/>
+                                        </svg>                                            
+                                    </div>
+                                </div>
+                                <div class="acc-body s-acc__body">
+                                    <div class="s-acc__list">
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s-acc__row">
+                                            <h3 class="table-row-title s-acc__row-title">В этой строчке должно быть название</h3>
+                                            <div class="s-acc__ratio">
+                                                <span class="table-column-subtitle s-acc__ratio-title">коэффициент KPI</span>
+                                                <div class="table-row-title s-acc__ratio-block">
+                                                    <span class="s-acc__ratio-text">k =</span>
+                                                    <span class="s-acc__ratio-result">1,5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+
+		</footer>
+
+		
+	</div>
+
+	<!-- Подключение скриптов -->
+	<script>
+	</script>
+
+	<script src="./js/libs/swiper-bundle.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+// Поле выбора
+.select {
+    position: relative;
+
+    &._open {
+
+        & .select-input {
+            background: $bg-input-active;
+        }
+
+        & .select-input__chevron {
+            transform: translate(0, -50%) scale(-1);
+        }
+
+        & .select-dropdown{
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    &._valid {
+
+        & .select-input__title {
+            font-weight: 500;
+            color: $main;
+        }
+    }
+
+    & input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+    }
+}
+
+.select-input {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $bg-input;
+    border: 1px solid $outline;
+    border-radius: 10px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: $tr;
+
+    @media (min-width: $minHover) {
+        
+        &:hover {
+            background: $bg-input-active;
+        }
+    }
+}
+
+.select-input__title {
+    font-size: 13px;
+    font-weight: 400;
+    color: $second;
+    pointer-events: none;
+}
+
+.select-input__chevron {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    width: 8px;
+    height: 8px;
+    pointer-events: none;
+    transition: $tr;
+}
+
+.select-dropdown,
+.select-city-dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 100%);
+    border-radius: 10px;
+    box-shadow: $shadow-block;
+    background: #fff;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: $tr;
+}
+
+.select-dropdown__list {
+    max-height: 200px;
+    margin: 10px 10px 10px 0;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #F6F7F9;
+        border-radius: $radius;
+    }
+     
+    &::-webkit-scrollbar-thumb {
+        background-color: $accent;
+        border-radius: $radius;
+    }
+}
+
+.select-dropdown__item {
+    position: relative;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    background: inherit;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: $tr;
+
+    &._selected {
+        color: $accent2;
+        background: #F3FCFF;
+    }
+
+    // &::before {
+    //     content: '';
+    //     display: inline-block;
+    //     width: 16px;
+    //     height: 16px;
+    //     background: center / contain no-repeat url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='10.947' cy='10.947' rx='10.24' ry='10.24' stroke='%23B4B4BF'/%3E%3C/svg%3E");
+    //     margin-right: 20px;
+    //     transition: $tr;
+        
+    //     // position: absolute;
+    //     // top: 50%;
+    //     // right: 20px;
+    //     // transform: translate(0, -50%);
+    //     // background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00002 16.2001L4.80002 12.0001L3.40002 13.4001L9.00002 19.0001L21 7.0001L19.6 5.6001L9.00002 16.2001Z' fill='%23467EF3'/%3E%3C/svg%3E") no-repeat;
+    //     // background-size: contain;
+    //     // background-position: center center;
+    //     // opacity: 0;
+    //     // visibility: hidden;
+    // }
+
+    &:hover {
+        
+        @media (min-width: $minHover) {
+            color: $accent2;
+            background: #F3FCFF;
+        }
+    }
+
+    // &:active {
+    //     background: $bg-second-l;
+    // }
+}

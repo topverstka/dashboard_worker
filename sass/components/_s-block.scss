@@ -1,0 +1,9 @@
+.s-block {
+    border: 1px solid $outline;
+    border-radius: $radius;
+    box-shadow: $shadow-block;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}

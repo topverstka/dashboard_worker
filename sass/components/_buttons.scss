@@ -122,87 +122,87 @@ $margin-icon: 12px; // Отступ иконки от текста
 // Hover-эффект у ссылки
 .link {
     
-    &:hover {
+    // &:hover {
         
-        @media (min-width: $minHover) {
-            color: $accent-hover;
-        }
-    }
+    //     @media (min-width: $minHover) {
+    //         color: $accent-hover;
+    //     }
+    // }
 
-    &:active {
-        color: $accent-active;
-    }
+    // &:active {
+    //     color: $accent-active;
+    // }
 }
 
 // Кнопки выбора 
-.choice-chips {
-    width: fit-content;
-    font-size: 14px;
-    font-weight: 600;
-    color: $main;
-    padding: 12px 24px;
-    background: #F8F8F8;
-    border-radius: 100px;
+// .choice-chips {
+//     width: fit-content;
+//     font-size: 14px;
+//     font-weight: 600;
+//     color: $main;
+//     padding: 12px 24px;
+//     background: #F8F8F8;
+//     border-radius: 100px;
 
-    &:hover {
+//     &:hover {
         
-        @media (min-width: $minHover) {
-            color: $accent;
-            background: #EFF7F5;
-        }
-    }
+//         @media (min-width: $minHover) {
+//             color: $accent;
+//             background: #EFF7F5;
+//         }
+//     }
 
-    &:active {
-        color: #fff;
-        background: $accent;
-    }
+//     &:active {
+//         color: #fff;
+//         background: $accent;
+//     }
 
-    &._active {
-        color: #fff;
-        background: $accent;
-    }
-}
+//     &._active {
+//         color: #fff;
+//         background: $accent;
+//     }
+// }
 
-.choice-chips_disabled {
-    color: $second;
-    background: #F8F8F8;
-    pointer-events: none;
-}
+// .choice-chips_disabled {
+//     color: $second;
+//     background: #F8F8F8;
+//     pointer-events: none;
+// }
 
 
 
 // Стрелка в слайдерах
-.slider-arrow {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $accent;
-    border-radius: 50%;
+// .slider-arrow {
+//     width: 56px;
+//     height: 56px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background: $accent;
+//     border-radius: 50%;
 
-    &:hover {
+//     &:hover {
         
-        @media (min-width: $minHover) {
-            background: $accent-hover;
-        }
-    }
+//         @media (min-width: $minHover) {
+//             background: $accent-hover;
+//         }
+//     }
 
-    &:active {
-        background: $accent-active;
-    }
+//     &:active {
+//         background: $accent-active;
+//     }
 
-    &.swiper-button-disabled {
-        background: #F8F8F8; 
-        // pointer-events: none;
+//     &.swiper-button-disabled {
+//         background: #F8F8F8; 
+//         // pointer-events: none;
 
-        & svg path {
-            fill: $second;
-        }
-    }
+//         & svg path {
+//             fill: $second;
+//         }
+//     }
 
-    & svg {
-        width: 24px;
-        height: 24px;
-    }
-}
+//     & svg {
+//         width: 24px;
+//         height: 24px;
+//     }
+// }

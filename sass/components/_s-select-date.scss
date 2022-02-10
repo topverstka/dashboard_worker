@@ -1,0 +1,16 @@
+.s-select-date {
+    display: flex;
+    align-items: center;
+
+    & .textfield {
+        max-width: 150px;
+    }
+}
+
+// Заголовок поля выбора
+.s-select-date__title {
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 10px;
+    color: $second;
+}

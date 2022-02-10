@@ -1,16 +1,15 @@
 // Пользовательские переменные
 :root {
-    --ffMain: 'Noto Sans', sans-serif;
+    --ffMain: 'Montserrat', sans-serif;
     --ffHeader: sans-serif;
     --tr: .3s;  // Плавность перехода
-    --radius: 16px; // border-radius
+    --radius: 8px; // border-radius
 }
 
 $ffMain: var(--ffMain);
 $ffHeader: var(--ffHeader);
 $tr: var(--tr);
 $minHover: 769px; // Минимальное разрешения экрана для hover-эффекта
-$container: 1158px;
 $radius: var(--radius);
 
 $laptop-l: 1440px;
@@ -22,27 +21,25 @@ $mobile-s: 320px;
 
 // Цвета
 :root {
-    --main: #242424;
-    --second: #747474;
-    --accent: #399478;
-    --accent-hover: #44BD99;
-    --accent-active: #37866E;
-    --accent2: #DC8B2D;
-    --accent2-active: #C27B29;
-    --outline: #C0C0C0;
-    --bg-page: #FFF;
-    --bg-block: #F8F8F8;
+    --main: #333333;
+    --second: #9EA7B0;;
+    --accent: #9CC500;
+    --accent2: #21BDEE;
+    --outline: #F4F4F4;
+    --bg-page: #ffffff;
+    --shadow-block: 0px 10px 20px -10px rgba(0, 0, 0, 0.15);
+    --bg-input: #F6F7F9;
+    --bg-input-active: #E9ECEF;
     --error: #E83D3D;
 }
 
 $main: var(--main);
 $second: var(--second);
 $accent: var(--accent);
-$accent-hover: var(--accent-hover);
-$accent-active: var(--accent-active);
 $accent2: var(--accent2);
-$accent2-active: var(--accent2-active);
 $outline: var(--outline);
 $bg-page: var(--bg-page);
-$bg-block: var(--bg-block);
+$shadow-block: var(--shadow-block);
+$bg-input: var(--bg-input);
+$bg-input-active: var(--bg-input-active);
 $error: var(--error);

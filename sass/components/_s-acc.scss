@@ -1,0 +1,135 @@
+.s-acc {
+    position: relative;
+    border: 1px solid $outline;
+    box-shadow: $shadow-block;
+    border-radius: $radius;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 5px;
+        height: 100%;
+        background: $accent;
+        opacity: 0;
+        transition: $tr;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &._show {
+        // border-left-color: $accent;
+        border-left: none;
+        padding-left: 1px;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.s-acc__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px 15px 40px;
+    cursor: pointer;
+
+    &._show {
+        
+        & .s-acc__title {
+            color: $accent;
+        }
+
+        & .s-acc__chevron svg {
+            transform: scale(-1);
+
+            & path {
+                fill: $accent;
+            }
+        }
+    }
+}
+
+.s-acc__title {
+    transition: $tr;
+}
+
+.s-acc__chevron {
+    width: 16px;
+    height: 16px;
+
+    & svg,
+    & svg path {
+        transition: $tr;
+    }
+}
+
+// Тело аккордеона
+.s-acc__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: $tr;
+}
+
+.s-acc__list {
+
+}
+
+.s-acc__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+
+    &:nth-child(odd) {
+        background: #F9FAFB;
+    }
+}
+
+.s-acc__row-title {
+
+}
+
+.s-acc__ratio {
+    display: flex;
+    align-items: center;
+}
+
+.s-acc__ratio-title {
+    margin-right: 15px;
+}
+
+.s-acc__ratio-block {
+    display: flex;
+    align-items: center;
+}
+
+.s-acc__ratio-text {
+
+}
+
+.s-acc__ratio-result {
+
+}
+
+.s-acc__ratio-change {
+    max-width: 100px;
+    margin-left: 5px;
+    
+    & input {
+        height: 26px;
+        font-size: 12px;
+        background: $bg-input-active;
+        padding: 0 10px;
+    }
+
+    & label {
+        font-size: 12px;
+        left: 10px;
+    }
+}

@@ -1,0 +1,119 @@
+// Ползунок со стрелкой эффективности и компетентности сотрудника
+.swip__elem {
+    width: 100%;
+    height: 87px;
+    background: #EAEAEA;
+    border-radius: 200px;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.swip__wrap {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 200px;
+    padding: 5px;
+}
+
+.swip__list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: .8fr 1fr 1fr 1fr .8fr;
+    border-radius: 200px;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background: linear-gradient(0deg, #FFFFFF -1.97%, #FCFCFC 23.13%, #F4F4F4 39.22%, #E5E5E5 52.79%, #D0D0D0 64.96%, #B5B5B5 76.07%, #999999 85.18%);
+        mix-blend-mode: multiply;
+    }
+}
+
+.swip__block { 
+
+    &:nth-child(1) {
+        background: linear-gradient(90deg, #DF1F2D 9.8%, #F14F43 91.14%);
+    }
+
+    &:nth-child(2) {
+        background: linear-gradient(90deg, #FA5A00 -92.24%, #FB8A00 480.7%);
+    }
+
+    &:nth-child(3) {
+        background: linear-gradient(90deg, #FCB800 -1.76%, #FEEA00 93.91%);
+    }
+
+    &:nth-child(4) {
+        background: linear-gradient(90deg, #BFE113 5.21%, #82D925 77.48%);
+    }
+
+    &:nth-child(5) {
+        background: linear-gradient(270deg, #41A300 -55.13%, #6BC618 127.64%);
+    }
+}
+
+.swip__arrow-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90%;
+    height: 100%;
+}
+
+.swip__arrow {
+    position: absolute;
+    top: 0;
+    transform: translate(-50%,0);
+    width: 66px;
+    height: 33px;
+    display: none;
+}
+
+.swip__title {
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.swip_comp {
+
+    & .swip__list {
+        column-gap: 5px;
+    }
+
+    & .swip__block { 
+
+        &:nth-child(1) {
+            background: #BBC7CD;
+        }
+
+        &:nth-child(2) {
+            background: #73B9DA;
+        }
+
+        &:nth-child(3) {
+            background: #3EB6EF;
+        }
+
+        &:nth-child(4) {
+            background: #33A2F8;
+        }
+
+        &:nth-child(5) {
+            background: #2491FD;
+        }
+    }
+}
