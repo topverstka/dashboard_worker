@@ -343,7 +343,9 @@ angleChartArrow(70, 100)
 function angleChartArrow(result, max) {
     const arrow = document.getElementById('chart-arrow')
 
-    arrow.style = `display:block; transform:rotate(${result/(max/100)*1.8}deg)`
+    if (arrow) {
+        arrow.style = `display:block; transform:rotate(${result/(max/100)*1.8}deg)`
+    }
 }
 
 // Функция для рассчета отклонения стрелки эффективности и компетентности сотрудника
@@ -352,5 +354,7 @@ indentSwipeArrow('swip_comp_arrow', 62, 100)
 function indentSwipeArrow(selector, result, max) {
     const arrow = document.getElementById(selector)
 
-    arrow.style = `display:block; left:${result/(max/100)}%`
+    if (arrow) {
+        arrow.style = `display:block; left:${result/(max/100)}%`
+    }
 }
