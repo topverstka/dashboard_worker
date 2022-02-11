@@ -10,7 +10,6 @@
 }
 
 .s-header__title {
-    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -23,7 +22,7 @@
 }
 
 .s-header__title-text {
-
+    white-space: nowrap
 }
 
 .s-header__content {

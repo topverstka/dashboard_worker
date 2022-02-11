@@ -6,11 +6,34 @@
 .s-table__header {
     background: #F2FBFF;
 
+    & .s-table__row {
+
+        &:nth-child(1) {
+
+            & .s-table__cell {
+                padding-bottom: 6px;
+            }
+        }
+
+        &:nth-child(2) {
+            display: flex;
+            // align-items: center;
+
+            & .s-table__cell {
+                display: flex;
+                justify-content: center;
+                padding-top: 0;
+            }
+        }
+    }
+
     & .s-table__cell {
 
         &:not(:last-child) {
             border-right: 1px solid #BEEDFD;
         }
+
+        
     }
 
     & .table-column-subtitle {
@@ -63,7 +86,7 @@
 }
 
 .s-table__title {
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
 }
 
 .s-table__subcell {
