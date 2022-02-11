@@ -1131,7 +1131,6 @@ body._lock {
 
 .s-table__subcell .table-row-title {
   position: relative;
-  min-width: 55px;
   width: 100%;
   text-align: center;
 }
@@ -1350,7 +1349,9 @@ body._lock {
 .swip__elem {
   width: 100%;
   height: 87px;
-  background: #EAEAEA;
+  background: -webkit-linear-gradient(354.68deg, #F5F5F5 8.8%, #EAEAEA 82.32%);
+  background: -o-linear-gradient(354.68deg, #F5F5F5 8.8%, #EAEAEA 82.32%);
+  background: linear-gradient(95.32deg, #F5F5F5 8.8%, #EAEAEA 82.32%);
   -webkit-border-radius: 200px;
           border-radius: 200px;
   padding: 10px;
@@ -1690,6 +1691,11 @@ body._lock {
   text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
 }
 
+.chart__block-text {
+  font-size: 12px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
 .chart-speed::before {
   content: '';
   position: absolute;
@@ -1743,10 +1749,10 @@ body._lock {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -1756,6 +1762,7 @@ body._lock {
 .chart__bottom-result {
   font-size: 30px;
   font-weight: 600;
+  margin-bottom: 85px;
 }
 
 .chart__arrow {
